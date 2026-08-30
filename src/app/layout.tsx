@@ -32,8 +32,8 @@ const SITE = "https://korat-is-korat.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: {
-    default: "โคราชที่ปิดไปแล้ว — แผนที่ธุรกิจที่ปิดตัวในเมืองนครราชสีมา",
-    template: "%s · โคราชที่ปิดไปแล้ว",
+    default: "ธุรกิจในโคราชที่ปิดตัวลง — แผนที่และบันทึก พ.ศ. 2566–2569",
+    template: "%s · ธุรกิจในโคราชที่ปิดตัวลง",
   },
   description:
     "บันทึกธุรกิจในเขตอำเภอเมืองนครราชสีมาที่ปิดตัวลงระหว่างปี 2566–2569 รวบรวมจากข่าวและข้อมูลจดทะเบียนเลิกกิจการของกรมพัฒนาธุรกิจการค้า พร้อมแผนที่และ heatmap รายตำบล",
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "th_TH",
     url: SITE,
-    siteName: "โคราชที่ปิดไปแล้ว",
-    title: "โคราชที่ปิดไปแล้ว",
-    description: "แผนที่และบันทึกธุรกิจที่ปิดตัวลงในเมืองโคราช ปี 2566–2569",
+    siteName: "ธุรกิจในโคราชที่ปิดตัวลง",
+    title: "ธุรกิจในโคราชที่ปิดตัวลง",
+    description: "บันทึกธุรกิจในเขตอำเภอเมืองนครราชสีมาที่ปิดตัวลง พร้อมแผนที่และ heatmap รายตำบล",
   },
   robots: { index: true, follow: true },
 };
@@ -67,7 +67,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <header className="border-b border-border">
           <nav className="mx-auto flex w-full max-w-[1400px] flex-wrap items-baseline gap-x-6 gap-y-2 px-5 py-3">
             <Link href="/" className="font-display text-base text-seng">
-              โคราชที่ปิดไปแล้ว
+              ธุรกิจในโคราชที่ปิดตัวลง
             </Link>
             <ul className="flex flex-wrap gap-x-5 gap-y-1 text-sm text-muted-foreground">
               {NAV.slice(1).map((item) => (

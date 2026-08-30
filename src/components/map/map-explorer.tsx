@@ -109,7 +109,7 @@ export function MapExplorer({ closures }: { closures: Closure[] }) {
     <div className="flex h-[calc(100vh-8.5rem)] min-h-[560px] flex-col lg:flex-row">
       {/* Controls + results */}
       <aside className="flex w-full shrink-0 flex-col border-b border-border lg:w-[340px] lg:border-b-0 lg:border-r">
-        <div className="space-y-5 overflow-y-auto p-5">
+        <div className="scroll-slim space-y-5 overflow-y-auto p-5">
           <div>
             <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
               มุมมองแผนที่
@@ -187,7 +187,7 @@ export function MapExplorer({ closures }: { closures: Closure[] }) {
           </p>
         </div>
 
-        <ul className="flex-1 divide-y divide-border overflow-y-auto">
+        <ul className="scroll-slim flex-1 divide-y divide-border overflow-y-auto">
           {filtered.slice(0, 300).map((c) => (
             <li key={c.id}>
               <Link

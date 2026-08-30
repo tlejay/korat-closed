@@ -1,4 +1,4 @@
-# CLAUDE.md — โคราชที่ปิดไปแล้ว (korat-closed)
+# CLAUDE.md — ธุรกิจในโคราชที่ปิดตัวลง (korat-closed)
 
 เว็บรวมธุรกิจในเขตอำเภอเมืองนครราชสีมาที่ปิดตัวลง พ.ศ. 2566–2569 + แผนที่ + heatmap
 Deploy: `korat-is-korat.vercel.app` · repo **public** `github.com/tlejay/korat-closed`

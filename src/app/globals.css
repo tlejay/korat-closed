@@ -282,6 +282,28 @@
   .font-display {
     line-height: 1.35;
   }
+
+  /* The default macOS scrollbar lands as a bright white slab against the dark
+     sidebar, right on the seam with the map. Slim it and tint it to the border
+     colour so it reads as an edge, not an object. */
+  .scroll-slim {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+  .scroll-slim::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scroll-slim::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scroll-slim::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background-color: var(--border);
+  }
+  .scroll-slim:hover::-webkit-scrollbar-thumb {
+    background-color: var(--muted-foreground);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
