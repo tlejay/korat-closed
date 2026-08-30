@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# โคราชที่ปิดไปแล้ว
 
-## Getting Started
+บันทึกธุรกิจในเขตอำเภอเมืองนครราชสีมาที่ปิดตัวลงระหว่างปี พ.ศ. 2566–2569
+พร้อมแผนที่ heatmap และการระบายสีรายตำบล
 
-First, run the development server:
+**เว็บไซต์:** https://korat-is-korat.vercel.app
+
+## ข้อมูลมาจากไหน
+
+| ชั้นข้อมูล | จำนวน | ที่มา |
+|---|---|---|
+| ข่าว | 10 | สำนักข่าวที่รายงานการปิดตัวของร้านในโคราช ทุกรายการมีลิงก์ |
+| ทะเบียนเลิกกิจการ | 944 | [DBD Open Data](https://opendata.dbd.go.th/dataset/dataset_11_02) — นิติบุคคลจดทะเบียนเลิกกิจการรายเดือน 43 เดือน |
+
+ขอบเขตตำบลจาก [OpenGISData-Thailand](https://github.com/chingchai/OpenGISData-Thailand)
+เติมตำบลในเมืองจาก OpenStreetMap · พิกัดร้านจาก Nominatim · แผนที่ฐานจาก CARTO
+
+**ข้อจำกัด** อ่านได้ที่ [/about](https://korat-is-korat.vercel.app/about) — สรุปสั้น ๆ คือ
+การจดทะเบียนเลิกนิติบุคคลไม่เท่ากับหน้าร้านปิด และร้านที่ไม่ได้จดทะเบียนไม่อยู่ในชุดข้อมูลนี้เลย
+
+## แจ้งข้อมูล
+
+รู้จักร้านที่ปิดแล้วแต่ยังไม่มีในนี้ หรือเจอข้อมูลผิด —
+[แจ้งผ่านฟอร์ม](https://korat-is-korat.vercel.app/submit) หรือเปิด issue ตรง ๆ ก็ได้
+
+## รันในเครื่อง
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## อัปเดตข้อมูล
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm data:all     # ดึง DBD ใหม่ → geocode → ขอบเขตตำบล → รวมเป็นชุดข้อมูล
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+แต่ละขั้นแยกรันได้: `data:fetch` · `data:geocode` · `data:tambons` · `data:build`
+ผลลัพธ์ทั้งหมด cache ไว้ใน `data/` จึงรันซ้ำได้โดยไม่ยิงเซิร์ฟเวอร์ต้นทางใหม่
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`pnpm build` เรียก `data:build` ให้อัตโนมัติ และจะ **fail ถ้ามีรายการที่ไม่มีแหล่งอ้างอิง**
+หรือมีพิกัดหลุดออกนอกโคราช

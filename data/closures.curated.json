@@ -1,0 +1,262 @@
+[
+  {
+    "id": "big-c-korat-1",
+    "nameTh": "บิ๊กซี สาขาโคราช 1",
+    "category": "retail",
+    "tambon": "ในเมือง",
+    "district": "เมืองนครราชสีมา",
+    "lat": 14.9825,
+    "lng": 102.09,
+    "geoAccuracy": "road",
+    "closedAt": "2026-06-30",
+    "confidence": "high",
+    "sources": [
+      {
+        "url": "https://www.matichon.co.th/region/news_5785753",
+        "publisher": "มติชน",
+        "date": "2026-06",
+        "type": "news"
+      },
+      {
+        "url": "https://hilight.kapook.com/view/253956",
+        "publisher": "Kapook",
+        "date": "2026-06-30",
+        "type": "news"
+      }
+    ],
+    "nameEn": "Big C Korat 1",
+    "address": "118 ถนนมิตรภาพ-หนองคาย (ตรงข้ามเทอร์มินอล 21 โคราช)",
+    "openedAt": "1996-12-19",
+    "reason": "หมดสัญญาเช่าที่ดิน 30 ปี เจ้าของที่ดินไม่ต่อสัญญา",
+    "reasonCategory": "lease_end"
+  },
+  {
+    "id": "papper-inter-buffet-korat",
+    "nameTh": "เปปเปอร์ อินเตอร์ บุฟเฟ่ต์ โคราช",
+    "category": "restaurant",
+    "tambon": "ในเมือง",
+    "district": "เมืองนครราชสีมา",
+    "lat": 14.9793,
+    "lng": 102.0614,
+    "geoAccuracy": "zone",
+    "closedAt": "2026-06-30",
+    "confidence": "high",
+    "sources": [
+      {
+        "url": "https://tojo.news/people-29062026-9/",
+        "publisher": "TOJO News",
+        "date": "2026-06-29",
+        "type": "news"
+      }
+    ],
+    "nameEn": "Papper Inter Buffet Korat",
+    "address": "1688/132 (โครงการซิตี้ลิงค์ ข้างตลาดเมย์แฟร์ / ห้างแม็คโครเก่า)",
+    "reasonCategory": "unknown"
+  },
+  {
+    "id": "canon-hi-tech-korat-factory",
+    "nameTh": "แคนนอน ไฮ-เทค (ประเทศไทย) โรงงานนครราชสีมา",
+    "category": "factory",
+    "tambon": "นากลาง",
+    "district": "สูงเนิน",
+    "lat": 14.8844245,
+    "lng": 101.9046292,
+    "geoAccuracy": "zone",
+    "closedAt": "2026-06-12",
+    "confidence": "high",
+    "sources": [
+      {
+        "url": "https://www.thansettakij.com/business/661313",
+        "publisher": "ฐานเศรษฐกิจ",
+        "date": "2026-06",
+        "type": "news"
+      }
+    ],
+    "nameEn": "Canon Hi-Tech (Thailand) Korat Factory",
+    "address": "นิคมอุตสาหกรรมนวนคร นครราชสีมา",
+    "openedAt": "2013",
+    "reason": "ยอดขายเครื่องพิมพ์แบบดั้งเดิมลดลงจากการเปลี่ยนผ่านสู่ดิจิทัล บริษัทขาดทุนสุทธิ 303 ล้านบาทเป็นครั้งแรกในรอบหลายปี จึงปิดสายการผลิตเพื่อลดต้นทุน",
+    "reasonCategory": "restructure"
+  },
+  {
+    "id": "sukee-jinda-korat",
+    "nameTh": "สุกี้จินดา สาขาโคราช (หน้าคลังใหม่)",
+    "category": "restaurant",
+    "tambon": "ในเมือง",
+    "district": "เมืองนครราชสีมา",
+    "lat": 14.9728311,
+    "lng": 102.0906723,
+    "geoAccuracy": "road",
+    "closedAt": "2026-05-05",
+    "confidence": "high",
+    "sources": [
+      {
+        "url": "https://www.khaosod.co.th/around-thailand/news_10233888",
+        "publisher": "ข่าวสด",
+        "date": "2026-05",
+        "type": "news"
+      },
+      {
+        "url": "https://www.matichon.co.th/region/news_5705663",
+        "publisher": "มติชน",
+        "date": "2026-05",
+        "type": "news"
+      }
+    ],
+    "nameEn": "Sukee Jinda Korat",
+    "address": "หน้าห้างสรรพสินค้าคลังพลาซ่า (คลังใหม่) ถนนจอมสุรางค์ยาตร์",
+    "reason": "ครบกำหนดตามสัญญาเช่า",
+    "reasonCategory": "lease_end"
+  },
+  {
+    "id": "dunkin-donuts-klang-plaza-old",
+    "nameTh": "ดังกิ้นโดนัท สาขาคลังพลาซ่าเก่า (ถนนอัษฎางค์)",
+    "category": "restaurant",
+    "tambon": "ในเมือง",
+    "district": "เมืองนครราชสีมา",
+    "lat": 14.9758106,
+    "lng": 102.1014606,
+    "geoAccuracy": "exact",
+    "closedAt": "2026-04-30",
+    "confidence": "medium",
+    "sources": [
+      {
+        "url": "https://www.dailynews.co.th/news/5826963/",
+        "publisher": "เดลินิวส์",
+        "date": "2026-04-30",
+        "type": "news"
+      }
+    ],
+    "nameEn": "Dunkin' Donuts Klang Plaza Old Branch",
+    "address": "หน้าห้างคลังพลาซ่าเก่า ถนนอัษฎางค์",
+    "openedAt": "1992",
+    "reason": "ยอดขายไม่เป็นไปตามเป้าหมาย หลังเปิดให้บริการมากว่า 34 ปี",
+    "reasonCategory": "economy"
+  },
+  {
+    "id": "oshinei-korat-2",
+    "nameTh": "โอชิเน โคราช 2 (บ้านเกาะ)",
+    "category": "restaurant",
+    "tambon": "ในเมือง",
+    "district": "เมืองนครราชสีมา",
+    "lat": 14.993,
+    "lng": 102.1238,
+    "geoAccuracy": "road",
+    "closedAt": "2025-12-19",
+    "confidence": "medium",
+    "sources": [
+      {
+        "url": "https://hilight.kapook.com/view/250975",
+        "publisher": "Kapook",
+        "date": "2025-12-17",
+        "type": "news"
+      }
+    ],
+    "nameEn": "Oshinei Korat 2",
+    "address": "1143 ถนนสุรนารายณ์ (ใกล้ไนท์บ้านเกาะ)",
+    "reasonCategory": "unknown"
+  },
+  {
+    "id": "nami-korat",
+    "nameTh": "NAMI โคราช (ปิ้งย่างเกาหลี, เดิม Mosim Korean BBQ)",
+    "category": "restaurant",
+    "tambon": "ในเมือง",
+    "district": "เมืองนครราชสีมา",
+    "lat": 14.9793,
+    "lng": 102.0614,
+    "geoAccuracy": "zone",
+    "closedAt": "2025-06-10",
+    "confidence": "medium",
+    "sources": [
+      {
+        "url": "https://www.thairath.co.th/news/society/2863239",
+        "publisher": "ไทยรัฐ",
+        "date": "2025-06-10",
+        "type": "news"
+      }
+    ],
+    "nameEn": "NAMI Korat Korean BBQ",
+    "address": "โครงการซิตี้ลิงค์ ถนนมานะศิลป์ (ก่อนถึงเดอะมอลล์โคราช ตรงข้ามตลาดเมย์แฟร์)",
+    "openedAt": "2021",
+    "reasonCategory": "unknown"
+  },
+  {
+    "id": "shiro-cafe-korat",
+    "nameTh": "ชิโระ คาเฟ่ (Shiro Cafe)",
+    "category": "restaurant",
+    "tambon": "ในเมือง",
+    "district": "เมืองนครราชสีมา",
+    "lat": 14.9681748,
+    "lng": 102.0870861,
+    "geoAccuracy": "road",
+    "closedAt": "2024-09-06",
+    "confidence": "medium",
+    "sources": [
+      {
+        "url": "https://www.matichon.co.th/region/news_4769948",
+        "publisher": "มติชน",
+        "date": "2024-09-06",
+        "type": "news"
+      }
+    ],
+    "nameEn": "Shiro Cafe",
+    "address": "638/4 ถนนพิบูลละเอียด (ย่านบุ่งตาหลัว)",
+    "reasonCategory": "unknown"
+  },
+  {
+    "id": "five-star-multiplex-korat",
+    "nameTh": "โรงหนังไฟว์สตาร์ มัลติเพล็กซ์",
+    "category": "entertainment",
+    "tambon": "ในเมือง",
+    "district": "เมืองนครราชสีมา",
+    "lat": 14.9727657,
+    "lng": 102.1060434,
+    "geoAccuracy": "road",
+    "closedAt": "2024-08-29",
+    "confidence": "high",
+    "sources": [
+      {
+        "url": "https://www.matichon.co.th/region/news_4763568",
+        "publisher": "มติชน",
+        "date": "2024-08-29",
+        "type": "news"
+      },
+      {
+        "url": "https://www.matichon.co.th/region/news_4764716",
+        "publisher": "มติชน",
+        "date": "2024-08-29",
+        "type": "news"
+      }
+    ],
+    "nameEn": "Five Star Multiplex Cinema Korat",
+    "address": "ถนนไชยณรงค์ (ห้าแยกประตูไชยณรงค์ ข้างโรงแรมปัญจดารา)",
+    "openedAt": "1996",
+    "reason": "ภาวะเศรษฐกิจซบเซาต่อเนื่องตั้งแต่โควิด ประชาชนลดค่าใช้จ่ายด้านบันเทิง และระบบสตรีมมิ่งทำให้ลูกค้าลดลง แบกรับต้นทุนไม่ไหว",
+    "reasonCategory": "economy"
+  },
+  {
+    "id": "tawandang-mahason-korat",
+    "nameTh": "ตะวันแดง มหาซน ณ โคราช",
+    "category": "restaurant",
+    "tambon": "ในเมือง",
+    "district": "เมืองนครราชสีมา",
+    "lat": 14.9608165,
+    "lng": 102.0663884,
+    "geoAccuracy": "road",
+    "closedAt": "2024-07-01",
+    "confidence": "high",
+    "sources": [
+      {
+        "url": "https://www.matichon.co.th/region/news_4658113",
+        "publisher": "มติชน",
+        "date": "2024-06",
+        "type": "news"
+      }
+    ],
+    "nameEn": "Tawandang Mahason Korat",
+    "address": "88/9 ถนนสืบศิริ (ใกล้สถานีรถไฟโคราช)",
+    "openedAt": "2002",
+    "reason": "ต้องคืนพื้นที่ลานจอดรถให้การรถไฟแห่งประเทศไทย (รฟท.) เพื่อก่อสร้างรถไฟความเร็วสูง ประกอบกับภาวะเศรษฐกิจซบเซาและสัญญาเช่าอาคารสิ้นสุดลง",
+    "reasonCategory": "lease_end"
+  }
+]

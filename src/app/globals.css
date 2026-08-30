@@ -1,26 +1,295 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+  .maplibregl-popup-content {
+    @apply bg-transparent! shadow-none! p-0! rounded-none!;
+  }
+  .maplibregl-popup-tip {
+    @apply hidden!;
+  }
+  .maplibregl-ctrl-attrib {
+    @apply bg-background! text-muted-foreground! border-border! rounded-md! border! shadow-sm!;
+  }
+  .maplibregl-ctrl-attrib a {
+    @apply text-muted-foreground!;
+  }
+  .maplibregl-ctrl-attrib a:hover {
+    @apply text-foreground!;
+  }
+  .maplibregl-ctrl-attrib-button {
+    @apply bg-transparent! dark:invert;
+  }
+}
+/* ---------------------------------------------------------------------------
+   Korat Closed — visual identity
+   Palette taken from the artefact of a closed Thai shop: the red-on-yellow
+   "เซ้งร้าน / ให้เช่า" banner taped to a shuttered front, against the chalky
+   grey-sage of a sun-bleached shophouse wall. Steel is the roller shutter.
+   --------------------------------------------------------------------------- */
+:root {
+  --background: #eae9e3;
+  --foreground: #211e19;
+  --card: #f6f5f1;
+  --card-foreground: #211e19;
+  --popover: #f6f5f1;
+  --popover-foreground: #211e19;
+  --primary: #211e19;
+  --primary-foreground: #f6f5f1;
+  --secondary: #dedcd4;
+  --secondary-foreground: #211e19;
+  --muted: #dedcd4;
+  --muted-foreground: #6e6a5f;
+  --accent: #dedcd4;
+  --accent-foreground: #211e19;
+  --border: #cdcac0;
+  --input: #cdcac0;
+  --ring: #c9372a;
+  --destructive: #c9372a;
+
+  /* signature accents */
+  --seng: #c9372a;        /* banner red — the one loud colour */
+  --banner: #d99a1e;      /* banner yellow */
+  --steel: #55606a;       /* roller shutter */
+
+  /* heat ramp, cool → hot, used by the map and every chart */
+  --heat-1: #ded9c4;
+  --heat-2: #e6c877;
+  --heat-3: #dd9a3d;
+  --heat-4: #c9642c;
+  --heat-5: #8d2118;
+
+  --radius: 0.25rem;
+}
+
+.dark {
+  --background: #17150f;
+  --foreground: #ede9e0;
+  --card: #211e17;
+  --card-foreground: #ede9e0;
+  --popover: #211e17;
+  --popover-foreground: #ede9e0;
+  --primary: #ede9e0;
+  --primary-foreground: #211e17;
+  --secondary: #2c2820;
+  --secondary-foreground: #ede9e0;
+  --muted: #2c2820;
+  --muted-foreground: #9a9384;
+  --accent: #2c2820;
+  --accent-foreground: #ede9e0;
+  --border: #38332a;
+  --input: #38332a;
+  --ring: #e8574a;
+  --destructive: #e8574a;
+  
+  --seng: #e8574a;
+  --banner: #f0be3e;
+  --steel: #8492a0;
+  
+  --heat-1: #3a2f26;
+  --heat-2: #7a2a1c;
+  --heat-3: #b4491f;
+  --heat-4: #dd8a2a;
+  --heat-5: #f5cf6a;
+}
+
+/* The site has no theme switch, so the OS preference alone drives it.
+   `.dark` above stays for anything that sets the class explicitly. */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not(.light) {
+    --background: #17150f;
+    --foreground: #ede9e0;
+    --card: #211e17;
+    --card-foreground: #ede9e0;
+    --popover: #211e17;
+    --popover-foreground: #ede9e0;
+    --primary: #ede9e0;
+    --primary-foreground: #211e17;
+    --secondary: #2c2820;
+    --secondary-foreground: #ede9e0;
+    --muted: #2c2820;
+    --muted-foreground: #9a9384;
+    --accent: #2c2820;
+    --accent-foreground: #ede9e0;
+    --border: #38332a;
+    --input: #38332a;
+    --ring: #e8574a;
+    --destructive: #e8574a;
+    
+    --seng: #e8574a;
+    --banner: #f0be3e;
+    --steel: #8492a0;
+    
+    --heat-1: #3a2f26;
+    --heat-2: #7a2a1c;
+    --heat-3: #b4491f;
+    --heat-4: #dd8a2a;
+    --heat-5: #f5cf6a;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@theme inline {
+  --color-seng: var(--seng);
+  --color-banner: var(--banner);
+  --color-steel: var(--steel);
+  --color-heat-1: var(--heat-1);
+  --color-heat-2: var(--heat-2);
+  --color-heat-3: var(--heat-3);
+  --color-heat-4: var(--heat-4);
+  --color-heat-5: var(--heat-5);
+  --font-display: var(--font-chonburi);
+  --font-sans: var(--font-plex-thai);
+  --font-mono: var(--font-plex-mono);
+  --font-heading: var(--font-chonburi);
+}
+
+@layer base {
+  /* Roller-shutter slats: the divider between major sections. */
+  .slats {
+    height: 14px;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      var(--border) 0 1px,
+      transparent 1px 4px
+    );
+  }
+  /* Thai display type sits low; give it room without wrecking the rhythm. */
+  .font-display {
+    line-height: 1.35;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

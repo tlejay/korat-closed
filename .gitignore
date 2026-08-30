@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Upstream DBD CSVs and the 11 MB national boundary file: re-fetchable with
+# `pnpm data:all`, and too bulky to version. The derived, reviewed datasets in
+# data/*.json and src/data/ ARE committed.
+/data/raw/dbd-csv/
+/data/raw/th-subdistricts.geojson
+/data/raw/th-districts.geojson

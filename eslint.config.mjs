@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Vendored from the mapcn registry (`shadcn add @mapcn/map`). It gets
+    // re-added wholesale on upgrade, so we don't hand-fix its lint findings.
+    "src/components/ui/map.tsx",
   ]),
 ]);
 

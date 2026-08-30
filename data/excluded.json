@@ -1,0 +1,36 @@
+[
+  {
+    "id": "bestbeef-korat",
+    "nameTh": "เบสท์บีฟ โคราช",
+    "reason": "โพสต์ปิดร้านของทางร้านเองระบุว่าจะกลับมาในรูปแบบใหม่ และพื้นที่เดิมถูกเปลี่ยนเป็นร้าน Kapow — เป็นการรีแบรนด์ ไม่ใช่การปิดกิจการ",
+    "sources": [
+      {
+        "url": "https://hilight.kapook.com/view/252047",
+        "publisher": "Kapook",
+        "date": "2026-02-16"
+      },
+      {
+        "url": "https://www.wongnai.com/restaurants/2943592pk-best-beef-%E0%B8%88%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99-kapow-%E0%B9%83%E0%B8%99%E0%B9%81%E0%B8%81%E0%B8%A3%E0%B8%9B-%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%8A",
+        "publisher": "Wongnai",
+        "date": "2026"
+      }
+    ]
+  },
+  {
+    "id": "funai-thailand-factory",
+    "nameTh": "บริษัท ฟูไน (ไทยแลนด์) จำกัด โรงงาน",
+    "reason": "โรงงานอยู่ ต.จันทึก อ.ปากช่อง ห่างจากตัวเมืองโคราชราว 100 กม. อยู่นอกขอบเขต 'เขตเมืองโคราช' ของเว็บนี้",
+    "sources": [
+      {
+        "url": "https://hilight.kapook.com/view/244235",
+        "publisher": "Kapook",
+        "date": "2024-11"
+      },
+      {
+        "url": "https://prachatai.com/journal/2024/11/111359",
+        "publisher": "ประชาไท",
+        "date": "2024-11"
+      }
+    ]
+  }
+]

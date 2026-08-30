@@ -1,0 +1,39 @@
+name: แจ้งร้านที่ปิด / แจ้งแก้ไขข้อมูล
+description: แจ้งธุรกิจที่ปิดตัวลงในเมืองโคราชที่ยังไม่มีในเว็บ หรือแจ้งว่าข้อมูลที่มีอยู่ผิด
+title: "[แจ้งร้านปิด] "
+labels: ["closure-report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ขอบคุณที่ช่วยกันเก็บข้อมูลครับ
+        ทุกรายการจะถูกตรวจกับแหล่งอ้างอิงก่อนขึ้นเว็บ ถ้ายืนยันไม่ได้เราจะตอบกลับในเธรดนี้ว่าติดตรงไหน
+  - type: input
+    id: name
+    attributes:
+      label: ชื่อร้าน / ธุรกิจ
+      placeholder: เช่น ร้านก๋วยเตี๋ยวเจ๊หมวย
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: ที่ตั้ง หรือจุดสังเกต
+      placeholder: เช่น ถนนมิตรภาพ ต.ในเมือง ตรงข้ามปั๊ม ปตท.
+  - type: input
+    id: closed_at
+    attributes:
+      label: ปิดเมื่อไหร่
+      placeholder: เช่น มีนาคม 2568
+  - type: textarea
+    id: sources
+    attributes:
+      label: แหล่งอ้างอิง
+      description: ลิงก์ข่าว โพสต์ Facebook หรือลิงก์ Google Maps ที่ขึ้นว่าปิดถาวร — รายการที่ไม่มีแหล่งอ้างอิงจะไม่ขึ้นเว็บ
+      placeholder: https://...
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: อยากบอกอะไรเพิ่ม
