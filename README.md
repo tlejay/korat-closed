@@ -10,7 +10,7 @@
 | ชั้นข้อมูล | จำนวน | ที่มา |
 |---|---|---|
 | ข่าว | 10 | สำนักข่าวที่รายงานการปิดตัวของร้านในโคราช ทุกรายการมีลิงก์ |
-| ทะเบียนเลิกกิจการ | 944 | [DBD Open Data](https://opendata.dbd.go.th/dataset/dataset_11_02) — นิติบุคคลจดทะเบียนเลิกกิจการรายเดือน 43 เดือน |
+| ทะเบียนเลิกกิจการ | 991 | [DBD Open Data](https://opendata.dbd.go.th/dataset/dataset_11_02) — นิติบุคคลจดทะเบียนเลิกกิจการรายเดือนตั้งแต่ ม.ค. 2566 |
 
 ขอบเขตตำบลจาก [OpenGISData-Thailand](https://github.com/chingchai/OpenGISData-Thailand)
 เติมตำบลในเมืองจาก OpenStreetMap · พิกัดร้านจาก Nominatim · แผนที่ฐานจาก CARTO

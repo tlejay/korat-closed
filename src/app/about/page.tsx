@@ -34,7 +34,7 @@ export default function AboutPage() {
         <p className="text-[15px]">
           <strong>2. ทะเบียนเลิกกิจการ ({dbdClosures.length.toLocaleString("th-TH")} ราย)</strong> —
           ชุดข้อมูลเปิด “นิติบุคคลจดทะเบียนเลิกกิจการ” รายเดือนของกรมพัฒนาธุรกิจการค้า
-          เราดึงมา 43 เดือน (ม.ค. 2566 – {Number(m)}/{beYear(Number(y))}) แล้วกรองเฉพาะ
+          เราดึงมา {(Number(y) - 2023) * 12 + Number(m)} เดือน (ม.ค. 2566 – {Number(m)}/{beYear(Number(y))}) แล้วกรองเฉพาะ
           อำเภอเมืองนครราชสีมา
         </p>
         <p className="text-sm text-muted-foreground">

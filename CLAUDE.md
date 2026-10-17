@@ -17,7 +17,7 @@ Deploy: `korat-is-korat.vercel.app` · repo **public** `github.com/tlejay/korat-
 ## ท่อข้อมูล
 
 ```
-pnpm data:fetch    scripts/fetch-dbd.ts       DBD CSV 43 เดือน → data/raw/dbd-korat-raw.json
+pnpm data:fetch    scripts/fetch-dbd.ts       DBD CSV ตั้งแต่ ม.ค. 2566 → data/raw/dbd-korat-raw.json
 pnpm data:geocode  scripts/geocode.ts         Nominatim → data/raw/dbd-mueang-geocoded.json
 pnpm data:tambons  scripts/fetch-tambons.ts   ขอบเขตตำบล → data/raw/korat-tambons.geojson
 pnpm data:build    scripts/build-data.ts      รวม + validate → src/data/closures.json

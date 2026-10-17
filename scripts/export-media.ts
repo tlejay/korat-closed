@@ -3,7 +3,7 @@
  *
  *  closures-mueang.csv       1 row per closure on the site (954), enriched with
  *                            entity type, registration year and business code
- *  registrations-mueang.csv  1 row per NEW juristic person in อ.เมือง, same 43 months
+ *  registrations-mueang.csv  1 row per NEW juristic person in อ.เมือง, same months as closures
  *  monthly.csv               registered vs dissolved per month
  *  tambon.csv                registered vs dissolved per subdistrict
  *
@@ -40,12 +40,13 @@ function decodeId(id: string) {
   return { entityType: ENTITY[id[3]] ?? `อื่น (${id[3]})`, registeredYearBE: String(2000 + Number(id.slice(4, 7))) };
 }
 
-function months(): string[] {
+/** Every month from Jan 2023 up to the latest dissolution file we hold. */
+function months(last: string): string[] {
   const out: string[] = [];
-  for (let y = 2023; y <= 2026; y++)
+  for (let y = 2023; `${y}01` <= last; y++)
     for (let m = 1; m <= 12; m++) {
       const ym = `${y}${String(m).padStart(2, "0")}`;
-      if (ym <= "202607") out.push(ym);
+      if (ym <= last) out.push(ym);
     }
   return out;
 }
@@ -108,13 +109,14 @@ async function main() {
   mkdirSync(CACHE_DIR, { recursive: true });
   mkdirSync(OUT_DIR, { recursive: true });
 
-  const regs: Reg[] = [];
-  for (const m of months()) regs.push(...regRows(await getRegCsv(m), m));
-
   const closures: Closure[] = JSON.parse(readFileSync(p("src", "data", "closures.json"), "utf8"));
   const raw: { registrationNo: string; purposeCode: string; sourceMonth: string }[] = JSON.parse(
     readFileSync(p("data", "raw", "dbd-mueang-geocoded.json"), "utf8"),
   );
+  const span = months(raw.map((r) => r.sourceMonth).sort().at(-1)!);
+
+  const regs: Reg[] = [];
+  for (const m of span) regs.push(...regRows(await getRegCsv(m), m));
   const rawById = new Map(raw.map((r) => [r.registrationNo, r]));
 
   const closureRows = closures.map((c) => {
@@ -148,7 +150,7 @@ async function main() {
   const regRowsOut = regs.map((r) => ({ ...r, ...decodeId(r.registrationNo) }));
 
   // Monthly: dissolutions bucketed by DBD file month (what DBD published), news by closedAt month.
-  const monthly = months().map((m) => {
+  const monthly = span.map((m) => {
     const ym = `${m.slice(0, 4)}-${m.slice(4)}`;
     return {
       month: ym,
@@ -173,7 +175,7 @@ async function main() {
   writeFileSync(join(OUT_DIR, "monthly.csv"), toCsv(monthly));
   writeFileSync(join(OUT_DIR, "tambon.csv"), toCsv(tambon));
 
-  console.log(`closures: ${closureRows.length} · new registrations (อ.เมือง): ${regs.length} · tambons: ${tambon.length}`);
+  console.log(`${span[0]}–${span.at(-1)} (${span.length} months) · closures: ${closureRows.length} · new registrations (อ.เมือง): ${regs.length} · tambons: ${tambon.length}`);
 }
 
 main();
