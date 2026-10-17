@@ -44,5 +44,6 @@ next-env.d.ts
 # `pnpm data:all`, and too bulky to version. The derived, reviewed datasets in
 # data/*.json and src/data/ ARE committed.
 /data/raw/dbd-csv/
+/data/raw/dbd-reg-csv/
 /data/raw/th-subdistricts.geojson
 /data/raw/th-districts.geojson
